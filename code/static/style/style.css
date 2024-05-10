@@ -1,0 +1,131 @@
+/* Reset CSS */
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/* Body styles */
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Navigation bar styles */
+.navbar {
+    background-color:#007bff ; /* Light blue color */
+    padding: 20px;
+    text-align: center;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: white; /* White text color */
+    padding: 10px 20px;
+    margin: 0 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.navbar a:hover {
+    background-color: blue;
+}
+
+/* Content container */
+.container {
+    text-align: center;
+    padding: 50px;
+}
+
+.heading {
+    margin-top: 50px; /* Adds top margin for spacing */
+    text-align: center; /* Center aligns the text within its container */
+    font-size: 48px; /* Make the font size bigger */
+}
+
+p {
+    text-align: center;
+    font-style: italic;
+}
+
+.buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px;
+    text-decoration: none;
+    color: #fff;
+    background-color: #007bff;
+    border: 1px solid #007bff;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #0056b3;
+}
+
+/* Background image for home page */
+.home-page {
+    background-image: url('/static/carimage.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Keep the background image fixed in the viewport */
+}
+
+/* Detection page specific styles */
+.detection-page {
+    background-image: url('/static/yawn_image.jpg'); /* Add background image for the detection page */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/* Detection message styles */
+/* Detection message styles */
+.detection-message {
+    position: absolute;
+    top: 40%;
+    left: 20px;
+    transform: translateY(-50%);
+    margin-bottom: 40px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add text shadow */
+    background-color: rgba(0, 0, 0, 0.5); /* Add background overlay */
+    padding: 20px; /* Add padding for better readability */
+    color: #fff; /* Set font color */
+}
+
+
+.uppercase {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 48px; /* Adjust as needed */
+    margin-bottom: 5%;
+}
+
+.white {
+    color: white; /* Light blue color */
+}
+
+.lowercase {
+    font-style: italic;
+    position: relative;
+    top: 20px;
+    color: #007bff;
+}
+/* Additional styles for the Start Detection button on the detection.html page */
+/* Additional styles for the Start Detection button on the detection.html page */
+.detection-page .button {
+    position: relative; /* Change to relative positioning */
+    right: 550px; /* Adjust the left position as needed */
+    margin-top: 400px; /* Add margin to create space between the button and other content */
+}
+
+
+

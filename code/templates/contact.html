@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <style>
+        /* Reset CSS */
+        body, html {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Body styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('/static/contact_background.jpg'); /* Background image */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            padding: 20px;
+        }
+
+        /* Content container styles */
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        /* Form container styles */
+        .form-container {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: left;
+            display: none; /* Initially hidden */
+        }
+
+        /* Heading styles */
+        h1 {
+            color: #8B4513; /* Light brown color */
+            margin-top: 0;
+        }
+
+        /* Line styles */
+        .line {
+            border-top: 1px solid #ccc;
+            margin: 20px 0;
+        }
+
+        /* Message styles */
+        .message {
+            font-style: italic;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        /* Form input styles */
+        input[type="text"],
+        textarea {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box; /* Ensure padding and border are included in the element's total width and height */
+        }
+
+        /* Submit form button styles */
+        .submit-button {
+            padding: 10px 20px;
+            background-color: #8B4513; /* Light brown color */
+            color:  white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .submit-button:hover {
+            background-color: #A0522D; /* Darker brown color */
+        }
+
+        /* Popup styles */
+        .popup {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            z-index: 999;
+            display: none;
+        }
+
+        .popup p {
+            margin: 0;
+        }
+
+        /* Popup button styles */
+        .popup-button {
+            padding: 10px 20px;
+            background-color: #8B4513; /* Light brown color */
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .popup-button:hover {
+            background-color: #A0522D; /* Darker brown color */
+        }
+        .navbar {
+            background-color: #A0522D; /* Match the color of the page */
+            padding: 20px;
+            text-align: center;
+        }
+        .navbar a {
+    text-decoration: none;
+    color: white; /* White text color */
+    padding: 10px 20px;
+    margin: 0 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+.navbar a:hover {
+    background-color: #8B4513;
+}
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <a href="/home">Home</a>
+        <a href="/about">About</a>
+        <a href="/contact">Contact Us</a>
+        <a href="/blog">Blog</a>
+    </nav>
+    <div class="container">
+
+        <h1>Contact Us</h1>
+        <div class="line"></div>
+        <p class="message">If you have any feedback or you want to suggest something, please fill out the form below so that we can take that into action and contact you for the same.</p>
+        <button class="button" onclick="toggleForm()">Submit Form</button>
+    </div>
+
+    <div class="form-container" id="formContainer">
+        <form id="feedbackForm" onsubmit="return showConfirmation()">
+            <label for="name">Name:</label><br>
+            <input type="text" id="name" name="name" required><br>
+
+            <label for="email">Email:</label><br>
+            <input type="text" id="email" name="email" required><br>
+
+            <label for="message">Message:</label><br>
+            <textarea id="message" name="message" rows="4" required></textarea><br>
+
+            <input type="submit" value="Submit" class="submit-button">
+        </form>
+    </div>
+
+    <div class="popup" id="popup">
+        <p>Form submitted successfully!</p>
+        <button class="popup-button" onclick="closePopup()">OK</button>
+    </div>
+
+    <script>
+        // Function to toggle form visibility
+        function toggleForm() {
+            var formContainer = document.getElementById("formContainer");
+            if (formContainer.style.display === "none") {
+                formContainer.style.display = "block";
+            } else {
+                formContainer.style.display = "none";
+            }
+        }
+
+        // Function to show confirmation popup
+        function showConfirmation() {
+            var popup = document.getElementById("popup");
+            popup.style.display = "block";
+            // Clear form inputs
+            document.getElementById("feedbackForm").reset();
+            return false; // Prevent form submission
+        }
+
+        // Function to close popup
+        function closePopup() {
+            var popup = document.getElementById("popup");
+            popup.style.display = "none";
+        }
+    </script>
+</body>
+</html>

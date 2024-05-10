@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detection Page</title>
+    <link rel="stylesheet" type="text/css" href="static/style/style.css">
+</head>
+<body class="detection-page">
+    <nav class="navbar">
+        <a href="/home">Home</a>
+        <a href="/about">About</a>
+        <a href="/contact">Contact Us</a>
+        <a href="/blog">Blog</a>
+
+    </nav>
+    <div class="container">
+        <div class="detection-message">
+            <p class="uppercase white">STAY ALERT,</p>
+            <p class="uppercase white">STAY SAFE!</p>
+            <div class="lowercase">Detecting drowsiness to ensure your safety on the road.</div>
+        </div>
+        <form action="/detect_drowsiness" method="post">
+            <button type="submit" class="button">Start Detection</button>
+        </form>
+    </div>
+</body>
+</html>
