@@ -1,3 +1,4 @@
-<b>Driver_Drowsiness_Detection_System</b>
-This project combines OpenCV, Dlib, Pygame, imutils, and a dedicated website to detect and alert drivers in real-time when they display signs of drowsiness while driving.
-The website offers a user-friendly interface for drowsiness detection initiation and webcam feed monitoring.
+# Room-Cleanliness-Detection
+This clean vs dirty room project is based on machine learning and was developed using custom Logistic Regression and Image Classification. 
+The tools used are Python Image Library(PIL) and OpenCV. 
+It enables a system to classify a room as dirty or clean, based on it's image.
